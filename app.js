@@ -14,6 +14,6 @@ function askUser() {
         personalMovieDB.movies[askMovie] = askMovieRang;
     }
 }
-askUser() // запуск функции
+askUser() // запуск функции и затем вывод обьекта в консоль
 
 console.log(personalMovieDB)
