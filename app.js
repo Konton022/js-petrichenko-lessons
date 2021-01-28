@@ -15,14 +15,13 @@ let personalMovieDB = {
 //     }
 // }
 // askUser() // запуск функции и затем вывод обьекта в консоль
-
-for (let i = 0; i < 2; i++) {
+let i = 0
+while (i < 2) {
     let askMovie = prompt('Один из последних просмотренных фильмов?', '');
     let askMovieRang = prompt('На сколько оцените его?', '');
-    if (askMovie != null && askMovieRang != null && askMovie.length < 50) {
+    if (askMovie != null && askMovieRang != null && askMovie != '' && askMovie.length < 50) {
         personalMovieDB.movies[askMovie] = askMovieRang;
-    } else {
-        i--;
+        i++
     }
 }
 if (personalMovieDB.count != 0 && personalMovieDB.count < 10) {
