@@ -7,13 +7,33 @@ let personalMovieDB = {
     genres: [],
     privat: false
 };
-function askUser() {
-    for (let i = 0; i < 2; i++) {
-        let askMovie = prompt('Один из последних просмотренных фильмов?', '');
-        let askMovieRang = prompt('На сколько оцените его?', '');
+// function askUser() {
+//     for (let i = 0; i < 2; i++) {
+//         let askMovie = prompt('Один из последних просмотренных фильмов?', '');
+//         let askMovieRang = prompt('На сколько оцените его?', '');
+//         personalMovieDB.movies[askMovie] = askMovieRang;
+//     }
+// }
+// askUser() // запуск функции и затем вывод обьекта в консоль
+
+for (let i = 0; i < 2; i++) {
+    let askMovie = prompt('Один из последних просмотренных фильмов?', '');
+    let askMovieRang = prompt('На сколько оцените его?', '');
+    if (askMovie != null && askMovieRang != null && askMovie.length < 50) {
         personalMovieDB.movies[askMovie] = askMovieRang;
+    } else {
+        i--;
     }
 }
-askUser() // запуск функции и затем вывод обьекта в консоль
+if (personalMovieDB.count != 0 && personalMovieDB.count < 10) {
+    console.log('мало фильмов');
+} else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+    console.log('ok!');
+} else if (personalMovieDB) {
+    console.log('you are movie watcher!');
+} else {
+    console.log('somethitng is wrong!');
+}
+
 
 console.log(personalMovieDB)
