@@ -51,7 +51,7 @@ let personalMovieDB = {
         }
     },
     toggleVisibleMyDB: function () {
-        if (personalMovieDB.privat === true) {
+        if (personalMovieDB.privat) {
             personalMovieDB.privat = false;
         } else {
             personalMovieDB.privat = true;
